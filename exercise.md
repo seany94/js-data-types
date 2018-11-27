@@ -18,57 +18,56 @@ What is the output of each of the expressions below?
 
 ```js
 typeof(15)
-// Prediction:
-// Actual:
+// Prediction: 'number'
+// Actual: 'number'
 
 typeof(5.5)
-// Prediction:
-// Actual:
+// Prediction: number
+// Actual: number
 
 typeof(NaN)
-// Prediction:
-// Actual:
+// Prediction: null
+// Actual: number
 
 typeof("hello")
-// Prediction:
-// Actual:
+// Prediction: string
+// Actual: string
 
 typeof(true)
-// Prediction:
-// Actual:
+// Prediction: boolean
+// Actual: boolean
 
 typeof(1 != 2)
-// Prediction:
-// Actual:
+// Prediction: boolean
+// Actual: boolean
 
 
 "hamburger" + "s"
-// Prediction:
-// Actual:
+// Prediction: hamburgers
+// Actual:hamburgers
 
 "hamburgers" - "s"
-// Prediction:
-// Actual:
+// Prediction: hamburger
+// Actual: NaN
 
 "1" + "3"
-// Prediction:
-// Actual:
+// Prediction: "13"
+// Actual: "13"
 
 "1" - "3"
-// Prediction:
-// Actual:
+// Prediction: NaN
+// Actual: -2
 
 "johnny" + 5
-// Prediction:
-// Actual:
+// Prediction: johnny5
 
 "johnny" - 5
-// Prediction:
-// Actual:
+// Prediction: NaN
+// Actual: NaN
 
 99 * "luftbaloons"
-// Prediction:
-// Actual:
+// Prediction: NaN
+// Actual: NaN
 ```
 
 What's going on in the second half of the previous question? Are there any "rules" we can pull from those examples?
@@ -80,12 +79,12 @@ What's going on in the second half of the previous question? Are there any "rule
 ### Arrays
 
 Javascript provides us with a number of native methods that allow us to interact with arrays. Find methods that do each of the following and provide an example...
-* Add an element to the back of an array.
-* Remove an element from the back of an array.
-* Add an element to the front of an array.
-* Remove an element from the front of an array.
-* Concatenates all the elements in an array into a string.
-* Separates the characters of a string into an array. This one is a string method.
+* Add an element to the back of an array.  .push()
+* Remove an element from the back of an array.  .pop()
+* Add an element to the front of an array.  .unshift()
+* Remove an element from the front of an array.  .shift()
+* Concatenates all the elements in an array into a string.  .join()/.toString()
+* Separates the characters of a string into an array. This one is a string method.   .split("")
 
 > This is a great exercise for practicing your "Google Fu"! If you need a starting point, check out [MDN's documentation page on arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
@@ -103,7 +102,7 @@ numbers.unshift(3)
 ```
 
 ```text
-Your answer goes here.
+numbers = [3, 2, 4, 6, 10]
 ```
 
 What is the return value of the below code sample? Come up with an answer yourself before testing it out in the console.
@@ -115,7 +114,7 @@ moreMorse.split(" ")
 ```
 
 ```text
-Your answer goes here.
+["dot", "dash", "pause", "dash", "dot"]
 ```
 
 What will the contents of the below array be after the below code sample is executed? Come up with an answer yourself before testing it out in the console.
@@ -132,7 +131,7 @@ bands[1][3] = "Ringo"
 ```
 
 ```text
-Your answer goes here.
+[["Mick", "Keith", "Ronnie", "Charlie"], ["Paul", "John", "George", "Ringo"]]
 ```
 ### Objects
 ```
@@ -167,8 +166,11 @@ var phoneBook = {
 ```
 
 Write a line of code that accesses the phone number for Pam.
+phoneBook["Pam"]
+phoneBook.Pam
 
 Write a line of code that creates a new record for John at 435-567-1223.
+phoneBook.John = "435-567-1223";
 
 Write your own object and console.log that value.
 
@@ -214,7 +216,7 @@ You're a bouncer at a bar. Given an `age` variable, create a conditional that sa
 // Your answer goes here.
 ```
 
-#### Further: 
+#### Further:
 
 Bar patrons must have an ID if the bouncer is even going to consider what age they are.
 - If the patron has an ID, the bouncer will then check if they are of the proper age
