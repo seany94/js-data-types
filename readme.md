@@ -1,5 +1,7 @@
 # Javascript Data Types Exercises
 
+## Update by sean
+
 ## Instructions
 
   1. Clone this repo: `$ git clone https://github.com/wdi-sg/js-data-types.git`
