@@ -71,9 +71,9 @@ var driverVision = [6,6];
 // // }
 
 
-var speed = 40;
-var tirePressure = 10;
-var driverVision = [6,8];
+var speed = 8;
+var tirePressure = 8;
+var driverVision = [6,7];
 
 
 function trafficStopCheck(speed, tirePressure, driverVision) {
@@ -81,18 +81,21 @@ function trafficStopCheck(speed, tirePressure, driverVision) {
             console.log("car crash");
         } else if (speed < 10 && tirePressure > 100) {
             console.log("rolling to a stop");
-        } else if (tirePressure < 10) {
-            console.log("I pulled you over because you are driving with a flat tire");
-        } else if (speed > 10) {
+        } else if (speed < 10) {
             console.log("I pulled you over because you were going too slow");
         } else if (speed > 50) {
             console.log("I pulled you over for going too fast");
+        } else if (tirePressure < 10) {
+            console.log("I pulled you over because you are driving with a flat tire");
+        }
+        else {
+            console.log("Have a safe journey");
         }
 }
 
 if (driverVision[1] > 12) {
     console.log("Sorry you can't drive");
-    } else if (driverVision[1] <= 6) {
+    } else if (driverVision[1] < 6) {
         speed = 60;
         trafficStopCheck(speed, tirePressure, driverVision);
     } else {
